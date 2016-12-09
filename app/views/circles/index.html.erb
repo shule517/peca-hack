@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
-<h1>参加表明</h1>
+<h1>
+  参加表明
+  <small>
+    (ただいま <strong><font color=""><%= @circles.count %>人</font> 参加してます！)
+  </small>
+</h1>
 
-<table class="table">
+<table class="table circle">
   <thead>
     <tr>
       <th width="240px">名前</th>
@@ -13,7 +18,7 @@
 
   <tbody>
     <% @circles.each do |circle| %>
-      <tr>
+      <tr data-href="<%= "/circles/#{circle.id}" %>">
         <td>
           <h4>
             <% if circle.twitter_id.present? %>

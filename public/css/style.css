@@ -4,3 +4,10 @@ img.user-icon {
   border-radius: 20px;
   border: 1px #AAAAAA solid;
 }
+
+table.circle td a { display: block;}
+
+tbody tr.clickable:hover td {
+    background: #ecf2fa;
+    cursor: pointer;
+}
