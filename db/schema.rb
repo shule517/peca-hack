@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161203024822) do
+ActiveRecord::Schema.define(version: 20161209104040) do
+
+  create_table "circles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "twitter_id"
+    t.text     "goal"
+    t.integer  "join"
+    t.string   "image"
+    t.string   "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
