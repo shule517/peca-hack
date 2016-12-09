@@ -29,7 +29,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <header id="header">
+          <header id="header">
         <div class="container">
           <a href="/">
             <%= image_tag("peercast.png", :size => "70x70", :alt => "PeerCast") %>
@@ -40,6 +40,7 @@
       </header>
       <div class="container">
         <div class="row">
+          <h5><%= link_to '第8回PeerCast忘年会ハッカソン wiki', 'https://github.com/peca-dev/hackathon/wiki/%E7%AC%AC8%E5%9B%9E-PeerCast%E5%BF%98%E5%B9%B4%E4%BC%9A%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3' %></h5>
           <%= yield %>
         </div>
       </div>
