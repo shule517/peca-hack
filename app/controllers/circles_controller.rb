@@ -4,7 +4,7 @@ class CirclesController < ApplicationController
   # GET /circles
   # GET /circles.json
   def index
-    @circles = Circle.all.order(twitter_id: :desc)
+    @circles = Circle.all.order(updated_at: :desc)
   end
 
   # GET /circles/1
