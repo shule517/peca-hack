@@ -16,7 +16,7 @@
       <tr>
         <td>
           <h4>
-            <% if !circle.twitter_id.nil? %>
+            <% if circle.twitter_id.present? %>
             <img class="user-icon" src="<%= "http://furyu.nazo.cc/twicon/#{circle.twitter_id}" %>">
             <% end %>
             <%= circle.name %>
