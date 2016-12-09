@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" style="padding-top: 10px">
     <div class="col-md-2">
       <td><%= f.label "twitter id(任意)" %></td>
     </div>
@@ -31,16 +31,7 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-2">
-      <td><%= f.label "今回やること！" %></td>
-    </div>
-    <div class="col-md-10">
-      <td><%= f.text_field :goal %></td>
-    </div>
-  </div>
-
-  <div class="row">
+  <div class="row" style="padding-top: 10px">
     <div class="col-md-2">
       <td><%= f.label "発表会参加しますか？" %></td>
     </div>
@@ -52,9 +43,18 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" style="padding-top: 10px">
     <div class="col-md-2">
-      <td><%= f.label "成果物！" %></td>
+      <td><%= f.label "今回やること！" %></td>
+    </div>
+    <div class="col-md-10">
+      <td><%= f.text_area :goal, :size => "60x3" %></td>
+    </div>
+  </div>
+
+  <div class="row" style="padding-top: 10px">
+    <div class="col-md-2">
+      <td><%= f.label "やったこと！" %></td>
     </div>
     <div class="col-md-10">
       <td>
@@ -63,8 +63,8 @@
       </td>
     </div>
   </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br>
 <% end %>
