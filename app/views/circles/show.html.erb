@@ -1,34 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h3>
+  <% if @circle.twitter_id.present? %>
+  <img class="user-icon" src="<%= "http://furyu.nazo.cc/twicon/#{@circle.twitter_id}" %>">
+  <% end %>
   <%= @circle.name %>
-</p>
+</h3>
 
-<p>
-  <strong>Twitter:</strong>
-  <%= @circle.twitter_id %>
-</p>
+<hr>
 
-<p>
-  <strong>Goal:</strong>
-  <%= @circle.goal %>
-</p>
-
-<p>
-  <strong>Join:</strong>
-  <%= @circle.join %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @circle.image %>
-</p>
-
-<p>
-  <strong>Detail:</strong>
-  <%= markdown(@circle.detail).html_safe %>
-</p>
+<% if @circle.detail.present? %>
+<%= markdown(@circle.detail).html_safe %>
+<% else %>
+<h3>- Nothing -<h3>
+<% end %>
 
 <%= link_to 'Edit', edit_circle_path(@circle) %> |
 <%= link_to 'Back', circles_path %>

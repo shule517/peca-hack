@@ -57,7 +57,10 @@
       <td><%= f.label "成果物！" %></td>
     </div>
     <div class="col-md-10">
-      <td><%= f.text_area :detail %></td>
+      <td>
+        マークダウンが使えます <a href="http://qiita.com/oreo/items/82183bfbaac69971917f">※書き方はこちらを参考に</a><br>
+        <%= f.text_area :detail, :size => "60x20" %>
+      </td>
     </div>
   </div>
 
