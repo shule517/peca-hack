@@ -11,6 +11,7 @@
     <tr>
       <th width="240px">名前</th>
       <th width="450px">今回やること！</th>
+      <th width="70px">成果物</th>
       <th width="130px">発表会の参加</th>
       <th colspan="3"></th>
     </tr>
@@ -27,7 +28,19 @@
             <%= circle.name %>
           </h4>
         </td>
-        <td><%= circle.goal %></td>
+
+        <td>
+          <%= circle.goal %>
+        </td>
+
+        <td>
+          <% if circle.detail.blank? %>
+          <%= "□" %>
+          <% else %>
+          <%= "☑" %>
+          <% end %>
+        </td>
+
         <td>
           <% if circle.join == 1 %>
           <%= "参加します！" %>
@@ -35,6 +48,7 @@
           <%= "考え中。。。" %>
           <% end %>
         </td>
+
         <td><small><%= link_to '(修正)', edit_circle_path(circle) %></small></td>
       </tr>
     <% end %>
