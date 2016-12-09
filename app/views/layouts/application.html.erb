@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>Taskapp</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>名古屋勉強会 λ</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
   </head>
-
   <body>
-    <%= image_tag("peercast.png", :size => "70x70", :alt => "PeerCast") %>
-    <%= image_tag("https://pbs.twimg.com/media/CzOqw9bUsAA9yjK.jpg:large", :size => "500x70", :alt => "第8回PeerCast忘年会ハッカソン") %>
-    <%= yield %>
-    <%= link_to "Home", circles_path %>
+    <div class="container-fluid">
+      <header id="header">
+        <div class="container">
+          <%= image_tag("peercast.png", :size => "70x70", :alt => "PeerCast") %>
+          <%= image_tag("https://pbs.twimg.com/media/CzOqw9bUsAA9yjK.jpg:large", :size => "500x70", :alt => "第8回PeerCast忘年会ハッカソン") %>
+        </div>
+      </header>
+      <div class="container">
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="container">
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

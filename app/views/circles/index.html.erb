@@ -1,16 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Circles</h1>
+<h1>参加表明</h1>
 
-<table>
+<table cellspacing="15">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Twitter</th>
-      <th>Goal</th>
-      <th>Join</th>
-      <th>Image</th>
-      <th>Detail</th>
+      <th width="200px">名前</th>
+      <th width="400px">今回やること！</th>
+      <th width="100px">発表会の参加</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,14 +16,15 @@
     <% @circles.each do |circle| %>
       <tr>
         <td><%= circle.name %></td>
-        <td><%= circle.twitter_id %></td>
         <td><%= circle.goal %></td>
-        <td><%= circle.join %></td>
-        <td><%= circle.image %></td>
-        <td><%= circle.detail %></td>
-        <td><%= link_to 'Show', circle %></td>
-        <td><%= link_to 'Edit', edit_circle_path(circle) %></td>
-        <td><%= link_to 'Destroy', circle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <% if circle.join = 1 %>
+          <%= "参加します！" %>
+          <% else %>
+          <%= "考え中。。。" %>
+          <% end %>
+        </td>
+        <td><small><%= link_to '修正', edit_circle_path(circle) %></small></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Circle', new_circle_path %>
+<h4><%= link_to '参加表明登録', new_circle_path %></h4>

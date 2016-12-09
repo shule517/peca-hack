@@ -11,34 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+
+  <div class="row">
+    <div class="col-md-2">
+      <td><%= f.label "名前" %></td>
+    </div>
+    <div class="col-md-10">
+      <td><%= f.text_field :name %></td>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :twitter_id %>
-    <%= f.text_field :twitter_id %>
+  <div class="row">
+    <div class="col-md-2">
+      <td><%= f.label "今回やること！" %></td>
+    </div>
+    <div class="col-md-10">
+      <td><%= f.text_field :goal %></td>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :goal %>
-    <%= f.text_area :goal %>
-  </div>
-
-  <div class="field">
-    <%= f.label :join %>
-    <%= f.number_field :join %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.text_field :image %>
-  </div>
-
-  <div class="field">
-    <%= f.label :detail %>
-    <%= f.text_field :detail %>
+  <div class="row">
+    <div class="col-md-2">
+      <td><%= f.label "発表会参加しますか？" %></td>
+    </div>
+    <div class="col-md-10">
+      <td><%= f.text_field :join %></td>
+    </div>
   </div>
 
   <div class="actions">
