@@ -11,7 +11,6 @@
     </div>
   <% end %>
 
-
   <div class="row">
     <div class="col-md-2">
       <td><%= f.label "名前" %></td>
@@ -35,7 +34,10 @@
       <td><%= f.label "発表会参加しますか？" %></td>
     </div>
     <div class="col-md-10">
-      <td><%= f.text_field :join %></td>
+      <td>
+        <label><%= f.radio_button :join, 1 %>参加します！</label>
+        <label><%= f.radio_button :join, 2 %>考え中。。。</label>
+      </td>
     </div>
   </div>
 
