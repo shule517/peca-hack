@@ -1,15 +1,11 @@
 <p id="notice"><%= notice %></p>
 <h1>参加表明</h1>
 
-
-
-
-
-<table cellspacing="15">
+<table class="table">
   <thead>
     <tr>
       <th width="200px">名前</th>
-      <th width="400px">今回やること！</th>
+      <th width="450px">今回やること！</th>
       <th width="100px">発表会の参加</th>
       <th colspan="3"></th>
     </tr>
@@ -27,7 +23,7 @@
           <%= "考え中。。。" %>
           <% end %>
         </td>
-        <td><small><%= link_to '修正', edit_circle_path(circle) %></small></td>
+        <td><small><%= link_to '(修正)', edit_circle_path(circle) %></small></td>
       </tr>
     <% end %>
   </tbody>
@@ -35,6 +31,6 @@
 
 <br>
 
-<h4><%= link_to '参加表明登録', new_circle_path %></h4>
+<h4><%= link_to '参加表明登録', new_circle_path, { :class => 'btn btn-primary' } %></h4>
 <hr>
 <h5><%= link_to '第8回PeerCast忘年会ハッカソン wiki', 'https://github.com/peca-dev/hackathon/wiki/%E7%AC%AC8%E5%9B%9E-PeerCast%E5%BF%98%E5%B9%B4%E4%BC%9A%E3%83%8F%E3%83%83%E3%82%AB%E3%82%BD%E3%83%B3' %></h5>
