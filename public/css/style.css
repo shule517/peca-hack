@@ -11,3 +11,10 @@ tbody tr.clickable:hover td {
     background: #ecf2fa;
     cursor: pointer;
 }
+
+.goal {
+  color: #888888;
+  padding-top: 10px;
+  max-height: 110px;
+  overflow: hidden
+}
