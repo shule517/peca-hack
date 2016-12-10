@@ -53,7 +53,7 @@ module ApplicationHelper
   end
 
   def countdown(date)
-    seconds = (Time.now - date)
+    seconds = (Time.now - date).to_i
     days = seconds / (60 * 60 * 24)
     days = days.to_i
     return "#{date.month}月#{date.day}日" if days > 0
