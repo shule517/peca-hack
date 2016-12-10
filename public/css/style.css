@@ -13,8 +13,13 @@ tbody tr.clickable:hover td {
 }
 
 .goal {
-  color: #888888;
   padding-top: 10px;
   max-height: 110px;
   overflow: hidden
+}
+
+.updated {
+  color: #888888;
+  font-size: 8px;
+  text-align: right;
 }

@@ -1,6 +1,6 @@
 #encoding :utf-8
-require "test_helper"
 require 'test/unit'
+require_relative "../test_helper"
 
 class TestHelper < ActionView::Base
   include ApplicationHelper

@@ -33,6 +33,9 @@
         <td>
           <div class="goal">
             <%= to_br(circle.goal).html_safe %>
+            <span class="updated">
+              @<%= countdown(circle.updated_at) %>
+            </span>
           </div>
         </td>
 
