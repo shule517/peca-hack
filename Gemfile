@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
 
+# test
+gem 'test-unit'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
