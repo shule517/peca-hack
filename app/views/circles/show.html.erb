@@ -7,21 +7,33 @@
   <%= @circle.name %>
 </h3>
 
-<hr>
-
-<h4>今回の目標！</h4>
+<h2 class="table">今回の目標！</h2>
 <small>
 <%= to_br(@circle.goal).html_safe %>
 </small>
+<br>
 
-<hr>
-
-<h4>作ったもの！</h4>
+<h2 class="table">作ったもの！</h2>
 <% if @circle.detail.present? %>
 <%= markdown(@circle.detail).html_safe %>
 <% else %>
-<h3>- Nothing -<h3>
+<h3 class="nothing">- Nothing -</h3>
 <% end %>
+<br>
+
+<h2 class="table">コメント！</h2>
+<% @circle.comments.each do |comment| %>
+  <b><%= comment.name %>:</b>
+  <%= comment.message %>
+  <small class="comment">
+    @<%= countdown(comment.updated_at) %>
+  </small>
+  <br>
+<% end %>
+<br>
+
+<%= render 'comments_form', comment: @comment %>
+<br>
 
 <%= link_to 'Edit', edit_circle_path(@circle) %> |
 <%= link_to 'Back', circles_path %>

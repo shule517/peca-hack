@@ -10,6 +10,7 @@ class CirclesController < ApplicationController
   # GET /circles/1
   # GET /circles/1.json
   def show
+    @comment = Comment.new
   end
 
   # GET /circles/new

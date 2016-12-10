@@ -1,0 +1,23 @@
+<%= form_for(comment) do |f| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.hidden_field :circle_id, :value => @circle.id %>
+    名前：
+    <%= f.text_field :name, :value => "ななし", :style => "margin-right: 10px" %>
+    コメント：
+    <%= f.text_field :message, :style => "margin-right: 10px" %>
+    <%= f.submit('書き込む') %>
+  </div>
+
+<% end %>

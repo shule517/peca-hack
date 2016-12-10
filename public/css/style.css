@@ -23,3 +23,15 @@ tbody tr.clickable:hover td {
   font-size: 8px;
   text-align: right;
 }
+
+.comment {
+  color: #888888;
+}
+
+.table {
+  border-bottom: 2px solid #eee;
+}
+
+.nothing {
+  color: #888888
+}
