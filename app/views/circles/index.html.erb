@@ -40,11 +40,15 @@
         </td>
 
         <td>
-          <% if circle.detail.blank? %>
-          <span class="glyphicon glyphicon-ok btn" style="color: #EEEEEE"></span>
-          <% else %>
-          <span class="glyphicon glyphicon-ok btn" style="color: green"></span>
-          <% end %>
+          <center>
+            <% if circle.detail.blank? %>
+            <span class="glyphicon glyphicon-ok btn" style="color: #DDD"></span>
+            <% else %>
+            <span class="glyphicon glyphicon-ok btn" style="color: green"></span>
+            <% end %>
+            <br>
+            <small style="color: #888888"><%= circle.comments.count %>コメ</small>
+          </center>
         </td>
 
         <td>
